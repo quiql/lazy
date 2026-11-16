@@ -1,0 +1,34 @@
+{
+  "name": "quiql-lazy",
+  "version": "1.0.0",
+  "description": "Ultra-lightweight, zero-dependency JavaScript library for lazy loading media and dynamically loading external resources.",
+  "main": "dist/quiql-lazy.js",
+  "jsdelivr": "dist/quiql-lazy.min.js",
+  "unpkg": "dist/quiql-lazy.min.js",
+  "types": "dist/quiql-lazy.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "quiql",
+    "lazy-load",
+    "lazyload",
+    "intersection-observer",
+    "resource-loader",
+    "dynamic-script",
+    "web-performance",
+    "green-it"
+  ],
+  "author": "WebSultan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/websultan/quiql-lazy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/websultan/quiql-lazy/issues"
+  },
+  "homepage": "https://github.com/websultan/quiql-lazy#readme"
+}

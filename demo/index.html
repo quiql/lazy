@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuiqlLazy — Demo</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="hero">
+        <h1>QuiqlLazy Demo</h1>
+        <p>Open DevTools (Console & Network) and scroll down to see lazy loading in action.</p>
+    </header>
+
+    <main>
+        <!-- 1. Background image & standard image lazy loading -->
+        <section class="demo-section">
+            <h2>1. Media Lazy Loading (<code>QuiqlLazy.LazyLoad</code>)</h2>
+            
+            <div class="media-grid">
+                <div class="media-item">
+                    <img data-src="img/1.jpg" alt="Tsori Tower Complex, Ingushetia" title="Tsori Tower Complex, Ingushetia" class="lazy" />
+                    <span><code>&lt;img data-src&gt;</code></span>
+                </div>
+
+                <div class="media-item">
+                    <article class="box lazy" data-bg="img/2.jpg" title="Vovnushki Tower Complex, Ingushetia"></article>
+                    <span><code>&lt;article data-bg&gt;</code></span>
+                </div>
+
+                <!-- Hidden element test (IntersectionObserver ignores display: none until shown) -->
+                <button type="button" id="show-hidden-btn" class="btn" style="height: 45px;">Show hidden image</button>
+                <div id="hidden-media" class="media-item" style="display: none;">
+                    <article data-bg="img/3.jpg" title="Mountains, Ingushetia" class="box lazy">
+                    </article>
+                    <span><code>&lt;article data-bg display: none&gt;</code></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. CustomLoad + scanExistingResources test with IMask -->
+        <section class="demo-section">
+            <h2>2. On-Demand Script & Existing DOM Scan (<code>IMask</code>)</h2>
+            <p><code>imask.js</code> is already included in HTML below. With <code>scanExistingResources: true</code>, QuiqlLazy detects it and skips duplicate network requests.</p>
+            
+            <div class="inputs">
+                <!-- input + input to test .add() method -->
+                <input id="tel" type="tel" placeholder="+0 (006) 000-0000" />
+                <input type="tel" name="phone" placeholder="+0 (999) 000-0000" />
+            </div>
+        </section>
+
+        <!-- 3. CustomLoad + Dynamic CSS/JS + Deduplication test with Swiper -->
+        <section class="demo-section">
+            <h2>3. Dynamic CSS & JS Loading + Cache Deduplication (<code>Swiper</code>)</h2>
+            <p>Swiper CSS and JS are loaded dynamically only when this slider enters the viewport.</p>
+
+            <section class="slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/1.jpg" alt="Tsori Tower Complex, Ingushetia" title="Tsori Tower Complex, Ingushetia" loading="lazy" /></div>
+                    <div class="swiper-slide"><img src="img/4.jpg" alt="Egikal Tower Complex, Ingushetia" title="Egikal Tower Complex, Ingushetia" loading="lazy" /></div>
+                    <div class="swiper-slide"><img src="img/5.jpg" alt="Mountains, Ingushetia" title="Mountains, Ingushetia" loading="lazy" /></div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-scrollbar"></div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <small>
+            Photo: Vladimir Pankratov / 
+            <a href="https://commons.wikimedia.org/wiki/Special:Redirect/page/109682336" target="_blank" rel="noopener">Wikimedia Commons</a> 
+            (<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>)
+        </small>
+    </footer>
+
+    <!-- Core library -->
+    <script src="../dist/quiql-lazy.min.js"></script>
+
+    <!-- Pre-loaded library to demonstrate scanExistingResources: true -->
+    <script src="https://unpkg.com/imask@7.6.1/dist/imask.js"></script>
+
+    <!-- Demo script -->
+    <script src="script.js"></script>
+</body>
+</html>
