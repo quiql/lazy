@@ -1,9 +1,9 @@
 <div align="center">
-  <img src="./logo.svg" alt="Quiql Logo" width="84" height="84" />
+  <img src="https://raw.githubusercontent.com/quiql/quiql-lazy/main/logo.png" alt="Quiql Logo" width="84" height="84" />
   <h1>Quiql Lazy</h1>
   <p><em>Quick eQuals Quality</em></p>
   <p>
-    <a href="./LICENSE">
+    <a href="https://github.com/quiql/quiql-lazy/blob/main/LICENSE">
       <img src="https://shields.io/badge/license-MIT-00cc66?style=flat-square" alt="License: MIT" />
     </a>
   </p>
@@ -38,10 +38,10 @@ Consider a modern, optimized website (using WebP images and Brotli/Gzip compress
 
 ## Installation
 
-### Via NPM / Yarn (Direct from GitHub)
+### Via NPM / Yarn
 
 ```bash
-npm install websultan/quiql-lazy
+npm install quiql-lazy
 ```
 
 ```javascript
@@ -52,9 +52,14 @@ import QuiqlLazy from 'quiql-lazy';
 const QuiqlLazy = require('quiql-lazy');
 ```
 
-### Via `<script>` tag
+### Via `<script>` tag (or CDN)
 ```html
-<script src="path/to/quiql-lazy.js"></script>
+<!-- Local file -->
+<script src="path/to/quiql-lazy.min.js"></script>
+
+<!-- Or via jsDelivr CDN -->
+<script src="https://cdn.jsdelivr.net/npm/quiql-lazy@1.0.0/dist/quiql-lazy.min.js"></script>
+
 <script>
     // Available globally as window.QuiqlLazy
 </script>
@@ -62,10 +67,10 @@ const QuiqlLazy = require('quiql-lazy');
 
 ## Demo
 
-Check out the [`demo/`](./demo) directory for complete working examples:
-* [`demo/index.html`](./demo/index.html) — HTML markup examples for lazy images, responsive `srcset`, background images, and custom trigger blocks.
-* [`demo/style.css`](./demo/style.css) — CSS transitions and visual state styles (`.lazy`, `.loading`, `.loaded`, `.error`).
-* [`demo/script.js`](./demo/script.js) — JavaScript initialization examples for `LazyLoad`, `CustomLoad`, and dynamic resource loading.
+Check out the [`demo/`](https://github.com/quiql/quiql-lazy/tree/main/demo) directory for complete working examples:
+* [`demo/index.html`](https://github.com/quiql/quiql-lazy/blob/main/demo/index.html) — HTML markup examples for lazy images, responsive `srcset`, background images, and custom trigger blocks.
+* [`demo/style.css`](https://github.com/quiql/quiql-lazy/blob/main/demo/style.css) — CSS transitions and visual state styles (`.lazy`, `.loading`, `.loaded`, `.error`).
+* [`demo/script.js`](https://github.com/quiql/quiql-lazy/blob/main/demo/script.js) — JavaScript initialization examples for `LazyLoad`, `CustomLoad`, and dynamic resource loading.
 
 ## Quick Start
 
